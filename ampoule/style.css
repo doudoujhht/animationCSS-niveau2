@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 77vh;
+  background: #333;
+  transform: translateY(23%);
+}
+
+label {
+  position: relative;
+  background: #212121;
+  width: 150px;
+  height: 75px;
+  border-radius: 10px;
+}
+
+label input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  width: 150px;
+  height: 75px;
+}
+
+label span {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background: #333;
+  width: 75px;
+  height: 75px;
+  border: solid 6px #212121;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+  font-size: 2em;
+}
+
+label input:checked ~ span {
+  left: 75px;
+}
+
+label input:checked ~ span ion-icon {
+  color: white;
+  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
+
+label input:checked ~ .bulb {
+  background: url("images/bulb_on.jpg");
+}
+
+.bulb {
+  position: absolute;
+  background-image: url("images/bulb_off.jpg");
+  width: 348px;
+  height: 408px;
+  bottom: 120px;
+  transform: translateX(-32%);
+  pointer-events: none;
+}/*# sourceMappingURL=style.css.map */
