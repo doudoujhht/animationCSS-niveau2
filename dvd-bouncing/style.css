@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: black;
+}
+
+marquee {
+  height: 99vh;
+}
+
+svg {
+  fill: hue-rotate(360deg);
+}/*# sourceMappingURL=style.css.map */
