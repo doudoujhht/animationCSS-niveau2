@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --couleur1:#04fc43;
+    --couleur2:red;
+    --couleur3:yellow;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+.loader{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cercle{
+    border: 2px solid var(--couleur1);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: tourner 8s infinite linear;
+}
+.cercle2{
+    border: 2px solid var(--couleur2);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: tourner 8s infinite linear;
+}
+
+.cercle3{
+    border: 2px solid var(--couleur3);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cercle::before , .cercle::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; background: var(--couleur1);
+    transform: translateY(-150px);
+    box-shadow: 0 0 20px var(--couleur1), 0 0 60px var(--couleur1);
+}
+
+.cercle2::before, .cercle2.cercle2::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--couleur2);
+    transform: translateY(-100px);
+    box-shadow: 0 0 20px var(--couleur2), 0 0 60px var(--couleur2);
+}
+
+.cercle3::before, .cercle3::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--couleur3);
+    transform: translateY(-50px);
+    box-shadow: 0 0 20px var(--couleur3), 0 0 60px var(--couleur3);
+}
+
+@keyframes tourner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes tournerInverse {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
