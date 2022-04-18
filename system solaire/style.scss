@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --modification:2;
+    --vt:8s;
+    --tt:50px;
+    --dt:400px;
+    --mars:#993d00;
+    --mercury:#1a1a1a;
+    --terre:#2f6a69;
+    --venus:#e6e6e6;
+    --jupiter:#b07f35;
+    --saturn:#b08f36;
+    --uranus:#5580aa;
+    --neptune:#366896;
+}
+body{
+    min-height: 100vh;
+    background: #000;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.planete{
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.soleil, .soleil::after, .soleil::before{
+    width: calc(var(--dt) * 0.2);
+    height: calc(var(--dt) * 0.2);
+    background-color: #FDB813;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #FDB813, 0 0 60px #FDB813,0 0 120px #FDB813;
+}
+#planete1{
+    width: calc(var(--dt) * 0.4);
+    height: calc(var(--dt) * 0.4);
+    border: 5px solid var(--mercury);
+    animation: tourner infinite calc(25.6s * var(--modification)) linear;
+    
+}
+#planete2{
+    width: calc(var(--dt) * 0.733);
+    height: calc(var(--dt) * 0.733);
+    border: 5px solid var(--venus);
+    animation: tourner infinite calc(18.66s * var(--modification)) linear;
+
+}
+#planete3{
+    width: var(--dt);
+    height: var(--dt);
+    border: 5px solid var(--terre);
+    animation: tourner infinite calc(16s * var(--modification)) linear;
+}
+
+#planete4{
+    width: calc(var(--dt) * 1.53);
+    height: calc(var(--dt) * 1.53);
+    border: 5px solid var(--mars);
+    animation: tourner infinite calc(12.8s * var(--modification)) linear;
+}
+#planete5{
+    width: calc(var(--dt) * 2.66);
+    height: calc(var(--dt) * 2.66);
+    border: 5px solid var(--jupiter);
+    animation: tourner infinite calc(6.92s * var(--modification)) linear;
+}
+#planete6{
+    width: calc(var(--dt) * 4);
+    height: calc(var(--dt) * 4);
+    border: 5px solid var(--saturn);
+    animation: tourner infinite calc(5.17s * var(--modification)) linear;
+}
+#planete7{
+    width: calc(var(--dt) * 5);
+    height: calc(var(--dt) * 5);
+    border: 5px solid var(--uranus);
+    animation: tourner infinite calc(3.62s * var(--modification)) linear;
+    
+}
+#planete8{
+    width: calc(var(--dt) * 5.6);
+    height: calc(var(--dt) * 5.6);
+    border: 5px solid var(--neptune);
+    animation: tourner infinite calc(2.5s * var(--modification)) linear;
+}
+#planete1::before, #planete1::after{
+    content: '';
+    position: absolute;
+    width: calc(var(--tt) * 0.38);
+    height: calc(var(--tt) * 0.38);
+    background-color: var(--mercury);
+    border-radius: 50%;
+    transform: translateX(calc(var(--dt) * 0.4/2));
+    box-shadow: 0 0 20px var(--mercury), 0 0 60px var(--mercury);
+}
+#planete2::before, #planete2::after{
+    content: '';
+    position: absolute;
+    width: calc(var(--tt) * 0.923);
+    height: calc(var(--tt) * 0.923);
+    background-color: var(--venus);
+    border-radius: 50%;
+    transform: translateX(calc(var(--dt) * 0.733/2));
+    box-shadow: 0 0 20px var(--venus), 0 0 60px var(--venus);
+}
+#planete3::before, #planete3::after{
+    content: '';
+    position: absolute;
+    width: var(--tt);
+    height: var(--tt);
+    background-color: var(--terre);
+    border-radius: 50%;
+    transform: translateX(calc(var(--dt)/2));
+    box-shadow: 0 0 20px var(--terre), 0 0 60px var(--terre);
+}
+
+#planete4::before, #planete4::after{
+    content: '';
+    position: absolute;
+    width: calc(var(--tt) * 0.53);
+    height: calc(var(--tt) * 0.53);
+    background-color: var(--mars);
+    border-radius: 50%;
+    transform: translateX(calc(var(--dt) * 1.53/2));
+    box-shadow: 0 0 20px var(--mars), 0 0 60px var(--mars);
+}
+
+#planete5::before, #planete5::after{
+    content: '';
+    position: absolute;
+    width: calc(var(--tt) * 5.5);
+    height: calc(var(--tt) * 5.5);
+    background-color: var(--jupiter);
+    border-radius: 50%;
+    transform: translateX(calc(var(--dt) * 2.66/2));
+    box-shadow: 0 0 20px var(--jupiter), 0 0 60px var(--jupiter);
+}
+
+#planete6::before, #planete6::after{
+    content: '';
+    position: absolute;
+    width: calc(var(--tt) * 4.65);
+    height: calc(var(--tt) * 4.65);
+    background-color: var(--saturn);
+    border-radius: 50%;
+    transform: translateX(calc(var(--dt) * 4/2));
+    box-shadow: 0 0 20px var(--saturn), 0 0 60px var(--saturn);
+}
+
+#planete7::before, #planete7::after{
+    content: '';
+    position: absolute;
+    width: calc(var(--tt) * 2);
+    height: calc(var(--tt) * 2);
+    background-color: var(--uranus);
+    border-radius: 50%;
+    transform: translateX(calc(var(--dt) * 5/2));
+    box-shadow: 0 0 20px var(--uranus), 0 0 60px var(--uranus);
+}
+#planete8::before, #planete8::after{
+    content: '';
+    position: absolute;
+    width: calc(var(--tt) * 1.9);
+    height: calc(var(--tt) * 1.9);
+    background-color: var(--neptune);
+    border-radius: 50%;
+    transform: translateX(calc(var(--dt) * 5.6/2));
+    box-shadow: 0 0 20px var(--neptune), 0 0 60px var(--neptune);
+}
+@keyframes tourner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.space-container{
+    display: flex;
+}
+
+
+.etoiles {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    z-index: -999; 
+    .etoile {
+        position: absolute;
+
+
+        &:after {
+            position: absolute;
+            content: ''; /* I found pluses looked nicer than asterisks */
+            background-color: white;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            display: block;
+            color: white;
+            box-shadow: 0 0 40px var(--neptune), 0 0 120px var(--neptune);
+        }
+        }  
+    @for $i from 1 through 250 {
+        &:nth-child(#{$i}) {
+            top: random(100) + vh;
+            left: random(100) + vh;
+        }
+    }
+    @for $i from 251 through 500 {
+    
+        &:nth-child(#{$i}) {
+            bottom: random(100) + vh;
+            right: random(100) + vh;
+        }
+    }
+}
+
+@keyframes move {
+    0%{
+        transform: translateX(random(100) + vh) rotate(random(360)+ deg);
+    }
+    100%{
+        transform: rotate(random(360)+ deg);
+    }
+    
+}
+
+
+
