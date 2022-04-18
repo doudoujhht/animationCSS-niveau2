@@ -48,8 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation: tourner 8s infinite linear;
-          animation: tourner 8s infinite linear;
+  animation: tourner reverse 19s infinite linear;
 }
 
 .cercle3 {
@@ -114,17 +113,17 @@ body {
 }
 @-webkit-keyframes tournerInverse {
   0% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(-360deg);
   }
 }
 @keyframes tournerInverse {
   0% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(-360deg);
   }
 }/*# sourceMappingURL=style.css.map */
