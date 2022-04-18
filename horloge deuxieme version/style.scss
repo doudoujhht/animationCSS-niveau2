@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.horloge{
+    width: 350px;
+    position: relative;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+}
+
+.chiffre{
+    position: absolute;
+    transform:rotate(calc(var(--i) * 30deg));
+    inset: 30px;
+    text-align: center;
+}
+.chiffre:nth-child(3n+3) b{
+    display: inline-block;
+    font-size: 1.5em;
+    transform:rotate(calc(var(--i) * -30deg));
+}
+
+#point{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    background-color: grey;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#heu{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#heu i{
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background-color: grey;
+}
